@@ -1,0 +1,249 @@
+*::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 200VH;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+}
+
+/*  créer des outlines sur tous les éléments de la page (permet un debuggage rapide)
+* {
+    border: 1px solid blue;
+}  */
+
+body {
+    width: 100%;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    /* background-color: white; */
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer a i {
+    margin-right: 8px;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu.active .bar:nth-child(1) {
+        /* transform: rotate(45deg) translate(5px, 5px); */
+        transform: translateY(0px) rotate(-135deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        /* transform: rotate(-45deg) translate(5px, -5px); */
+        transform: translateY(0px) rotate(135deg);
+    }
+}
+
+/* ackToTop */
+/*_________________flèche retour en haut____________________*/
+/*  flèche retour en haut  */
+.back-to-top {
+    /*  Basic styling  */
+    background-color: oklch(100% 0 0);
+    border: 2px solid currentColor;
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 0.3rem;
+    /*  Hidden by default  */
+    position: fixed;
+    inset: auto 2rem 2rem auto;
+}
+
+/*  utiliser la couleur du texte  */
+.back-to-top:is(:link, :visited) {
+    color: currentColor;
+    text-decoration: none;
+}
+
+/*  masquer le texte retour en haut  */
+.back-to-top span {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.back-to-top {
+    --green: oklch(85.33% 0.15 141.46);
+}
+
+/*  animation progression de couleur la flèche  */
+@keyframes progress {
+    0% {
+        --progress: 0%;
+    }
+
+    100% {
+        --progress: 100%;
+    }
+}
+
+/*  animation de la flèche  */
+.back-to-top {
+    --green: oklch(85.33% 0.15 141.46);
+    animation: progress linear;
+    animation-timeline: scroll();
+}
+
+/*  rotation de la flèche  */
+.back-to-top svg {
+    transform: rotate(var(--angle));
+}
+
+/*  propriete de la progression de la fleche  */
+@property --progress {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: -90deg;
+}
+
+@keyframes progress {
+    0% {
+        --progress: 0%;
+        --angle: 90deg;
+    }
+
+    2% {
+        --angle: 90deg;
+
+    }
+
+    100% {
+        --progress: 100%;
+    }
+}
+
+@supports not (animation-timeline: scroll) {
+    .back-to-top {
+        background: var(--green);
+    }
+}
+
+@media(prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

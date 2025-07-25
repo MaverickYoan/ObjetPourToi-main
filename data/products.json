@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Smartphone XYZ",
+        "price": 599.99,
+        "description": "Un smartphone ultra performant avec écran OLED.",
+        "image": "images/smartphone.jpg",
+        "category": "Électronique"
+    },
+    {
+        "id": 2,
+        "name": "Casque audio",
+        "price": 149.99,
+        "description": "Casque sans fil avec réduction de bruit active.",
+        "image": "images/casque.jpg",
+        "category": "Accessoires"
+    }
+]

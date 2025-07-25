@@ -1,0 +1,8 @@
+# Installer les dépendances
+npm install express stripe cors dotenv
+
+# Copier ce fichier en .env et mettre votre clé Stripe
+cp .env.example .env
+
+# Lancer le serveur
+node server.js

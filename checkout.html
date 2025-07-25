@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement sécurisé</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://js.stripe.com/v3"></script>
+</head>
+<body>
+    <h2>Paiement sécurisé</h2>
+    <form id="payment-form">
+        <div id="card-element"><!-- Stripe Elements s'affichera ici --></div>
+        <button id="checkout-button" type="submit">Payer</button>
+        <div id="payment-message"></div>
+    </form>
+    <script src="script/checkout.js"></script>
+</body>
+</html>

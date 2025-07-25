@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonPourToi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <h1 id="content">Bienvenue sur Mon E-commerce</h1>
+        <nav>
+            <a href="catalog.html">Catalogue</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="cart.html">Panier</a>
+            <a href="contact.html">Contact</a>
+            <a href="user.html">Mon compte</a>
+
+        </nav>
+    </header>
+    <!-- * Bouton ajouter au panier -->
+    <button onclick="addToCart(1)">Ajouter au panier</button>
+
+    <!-- * Section promotions -->
+
+    <section id="promotions">
+        <h2>Offres Spéciales</h2>
+        <p>Découvrez nos promotions incroyables !</p>
+    </section>
+
+    <!-- * FOOTER -->
+    <footer>
+        <p>Suivez-nous sur nos réseaux sociaux :</p>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+
+        <p>&copy; 2025 Mon E-commerce - Tous droits réservés.</p>
+    </footer>
+
+    <!-- back-to-top section -------------->
+    <a href="#content" class="back-to-top">
+        <span>Retour en haut</span>
+        <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
+        <svg width="32" height="32" viewbox=" 0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+        </svg>
+        <!-- Script Section : Script pour activer le menu mobile -->
+        <script src="script/script.js"></script>
+
+</body>
+
+</html>
