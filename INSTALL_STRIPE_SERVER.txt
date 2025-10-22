@@ -6,3 +6,6 @@ cp .env.example .env
 
 # Lancer le serveur
 node server.js
+
+# installer la bibliothèque Stripe via npm node.js
+npm install stripe
