@@ -9,3 +9,6 @@ node server.js
 
 # installer la bibliothèque Stripe via npm node.js
 npm install stripe
+
+# apikey
+6378:gk-Z3MLY5HKLJNvaXRaozF2YWxE6-2eDLdvIbKnNrKJG5gib_M4IuXDy8dbdrBB5
